@@ -196,6 +196,167 @@ const SideBar = ({ barDisplay, changeDisplay, state }) => {
                         }
                     ></Accordion.Item>
                 </Accordion>
+
+                <Accordion
+                    icon={<TbChevronRight />}
+                    className="sidebar-item"
+                    iconPosition="right"
+                    multiple
+                    transitionDuration="100"
+                >
+                    <Accordion.Item
+                        className="sidebar-item"
+                        label={
+                            <span>
+                                {" "}
+                                <ThemeIcon color="red" variant="light">
+                                    <FaCog />
+                                </ThemeIcon>{" "}
+                                Web
+                            </span>
+                        }
+                    >
+                        <Accordion
+                            icon={<TbChevronRight />}
+                            className="sidebar-item"
+                            iconPosition="right"
+                            multiple
+                            transitionDuration="100"
+                        >
+                            <Accordion.Item
+                                className="sidebar-item"
+                                label={
+                                    <span>
+                                        {" "}
+                                        <ThemeIcon color="red" variant="light">
+                                            <FaCog />
+                                        </ThemeIcon>{" "}
+                                        FAQ's
+                                    </span>
+                                }
+                            >
+                                <div className="item-wrapper">
+                                    {" "}
+                                    <A
+                                        onClick={() => {
+                                            changeDisplay({
+                                                type: "normalSlide",
+                                            });
+                                        }}
+                                        to={"/admin/edit-faqs"}
+                                    >
+                                        {" "}
+                                        <ThemeIcon color="blue" variant="light">
+                                            <HiShieldCheck />
+                                        </ThemeIcon>
+                                       Edit FAQ's
+                                    </A>
+                                </div>
+                                <div className="item-wrapper">
+                            {" "}
+                            <A
+                                onClick={() => {
+                                    changeDisplay({ type: "normalSlide" });
+                                }}
+                                to={"/admin/add-faqs"}
+                            >
+                                {" "}
+                                <ThemeIcon color="blue" variant="light">
+                                    <HiShieldCheck />
+                                </ThemeIcon>
+                               Add FAQ's
+                            </A>
+                        </div>
+                            </Accordion.Item>
+
+
+                            <Accordion.Item
+                                className="sidebar-item"
+                                label={
+                                    <span>
+                                        {" "}
+                                        <ThemeIcon color="red" variant="light">
+                                            <FaCog />
+                                        </ThemeIcon>{" "}
+                                       Services
+                                    </span>
+                                }
+                            >
+                                <div className="item-wrapper">
+                                    {" "}
+                                    <A
+                                        onClick={() => {
+                                            changeDisplay({
+                                                type: "normalSlide",
+                                            });
+                                        }}
+                                        to={"/admin/edit-service"}
+                                    >
+                                        {" "}
+                                        <ThemeIcon color="blue" variant="light">
+                                            <HiShieldCheck />
+                                        </ThemeIcon>
+                                       Edit Services
+                                    </A>
+                                </div>
+                                <div className="item-wrapper">
+                            {" "}
+                            <A
+                                onClick={() => {
+                                    changeDisplay({ type: "normalSlide" });
+                                }}
+                                to={"/admin/add-service"}
+                            >
+                                {" "}
+                                <ThemeIcon color="blue" variant="light">
+                                    <HiShieldCheck />
+                                </ThemeIcon>
+                               Add Services
+                            </A>
+                        </div>
+                            </Accordion.Item>
+
+                            <Accordion.Item
+                        className="sidebar-item"
+                        label={
+                            <span>
+                                {" "}
+                                <ThemeIcon color="red" variant="light">
+                                    <FaCog />
+                                </ThemeIcon>{" "}
+                                Hero
+                            </span>
+                        }
+                    >
+                          <div className="item-wrapper">
+                                    {" "}
+                                    <A
+                                        onClick={() => {
+                                            changeDisplay({
+                                                type: "normalSlide",
+                                            });
+                                        }}
+                                        to={"/admin/edit-hero"}
+                                    >
+                                        {" "}
+                                        <ThemeIcon color="blue" variant="light">
+                                            <HiShieldCheck />
+                                        </ThemeIcon>
+                                       Edit Hero
+                                    </A>
+                                </div>
+                    </Accordion.Item>
+                        </Accordion>
+                    </Accordion.Item>
+
+
+                                
+                    
+                </Accordion>
+
+
+
+                
             </div>
         </div>
     );

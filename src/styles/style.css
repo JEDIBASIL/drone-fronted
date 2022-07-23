@@ -1,3 +1,383 @@
+.adminApp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background-color: whitesmoke;
+}
+.adminApp .information {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.adminApp .information h2 {
+  color: rgb(78, 78, 78);
+}
+.adminApp .information img {
+  width: 400px;
+}
+.adminApp .information p {
+  font-size: 18px;
+  color: slategrey;
+}
+.adminApp .sidebar {
+  min-width: 280px;
+  max-width: 280px;
+  border-right: 1px solid rgb(228, 228, 228);
+  background-color: white;
+  height: 100vh;
+  padding-top: 20px;
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: 0.2s;
+}
+.adminApp .sidebar .sidebar-menu {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-a {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;
+  justify-content: flex-start;
+  padding-left: 15px;
+  gap: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  border-radius: 5px;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-a:hover {
+  background-color: #f8f9fa;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-a.active {
+  background-color: rgb(242, 246, 248) !important;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-item {
+  border-color: transparent !important;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-item .item-wrapper {
+  display: flex;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-item .item-wrapper a {
+  padding-left: 15px;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-item .item-wrapper:hover {
+  background-color: #f8f9fa;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-item span {
+  display: flex;
+  gap: 15px;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-item h3 {
+  border-radius: 5px;
+}
+.adminApp .sidebar .sidebar-menu .sidebar-item h3 button:hover {
+  border-radius: 5px;
+}
+.adminApp .sidebar .sidebar-menu .item-wrapper a {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 15px;
+  color: rgb(78, 78, 78);
+  font-size: 16px;
+}
+.adminApp .sidebar.minimizeBar {
+  position: fixed;
+  min-width: 380px;
+  max-width: 380px;
+  height: calc(100vh - 40px);
+  top: 20px;
+  left: 20px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.144);
+  z-index: 20;
+  transition: 0.2s;
+  /* transform: translateX(-110%); */
+}
+.adminApp .container {
+  width: 100%;
+  background-color: whitesmoke;
+  min-height: 100vh;
+  transition: 0.3s;
+}
+.adminApp .container .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 0px 20px;
+}
+.adminApp .container .top-bar h1 {
+  color: rgb(92, 92, 92);
+}
+.adminApp .container .top-bar .search-bar {
+  width: 300px;
+}
+.adminApp .container .top-bar .admin-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+.adminApp .container .top-bar .admin-details img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adminApp .container .top-bar .admin-details i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gainsboro;
+}
+.adminApp .container .top-bar .admin-details i svg {
+  width: 22px;
+  transition: 0.2s;
+  height: 22px;
+}
+.adminApp .container .content {
+  padding: 30px;
+}
+.adminApp .container .content .dashboard-container {
+  width: 100%;
+}
+.adminApp .container .content .dashboard-container .IncomeCard {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .MonthCalander {
+  background-color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: #03c9d7;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .MonthCalander h1 {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4666666667);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .MonthCalander button {
+  font-weight: 600;
+  color: white !important;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .MonthCalander button:hover {
+  color: gray !important;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .MonthCalander svg {
+  color: gainsboro !important;
+  font-size: 40px;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .MonthCalander div {
+  font-weight: 600;
+  color: gainsboro !important;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer .IncomeCardContainer {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer .IncomeCardContainer .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 20px;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer .IncomeCardContainer .card h1 {
+  color: rgb(95, 95, 95);
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer .IncomeCardContainer .card span {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer .incomeChart {
+  height: 350px;
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 25px;
+  overflow: hidden;
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer .incomeChart svg {
+  width: 100% !important;
+  transform: scale(1.4) translateY(-10px);
+}
+.adminApp .container .content .dashboard-container .IncomeCard .IncomeGraphContainer .incomeChart svg g text tspan {
+  font-size: 10px !important;
+}
+.adminApp .container .content .dashboard-container .Overview {
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 20px;
+}
+.adminApp .container .content .dashboard-container .Overview .overview-date {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.adminApp .container .content .dashboard-container .Overview .OverviewCard {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}
+.adminApp .container .content .dashboard-container .Overview .OverviewCard .card {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0px;
+}
+.adminApp .container .content .dashboard-container .Overview .OverviewCard .card:nth-child(2), .adminApp .container .content .dashboard-container .Overview .OverviewCard .card:nth-child(5) {
+  border-left: 2px solid gainsboro;
+  border-right: 2px solid gainsboro;
+  border-radius: 0;
+}
+.adminApp .container .content .dashboard-container .Overview .OverviewCard .card:nth-child(1), .adminApp .container .content .dashboard-container .Overview .OverviewCard .card:nth-child(2), .adminApp .container .content .dashboard-container .Overview .OverviewCard .card:nth-child(3) {
+  border-bottom: 1px solid gainsboro;
+}
+.adminApp .container .content .dashboard-container .Overview .OverviewCard .card h1 {
+  font-size: 40px;
+  color: slategray;
+}
+.adminApp .container .content .dashboard-container .Overview .OverviewCard .card .top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: slategray;
+}
+.adminApp .container .content .dashboard-container .Overview .OverviewCard .card .top svg {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+.adminApp .container .content .dashboard-container .recent-user {
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+}
+.adminApp .container .content .dashboard-container .recent-user h2 {
+  margin-bottom: 20px;
+  color: rgb(78, 78, 78);
+}
+.adminApp .container .content .dashboard-container .recent-user table button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.adminApp .container .content .dashboard-container .recent-user table button svg {
+  width: 20px;
+  height: 20px;
+}
+.adminApp .container .content .table-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+.adminApp .container .content .table-container table button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.adminApp .container .content .table-container.drone table {
+  display: none;
+}
+.adminApp .container .content .regDrone {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  color: rgb(78, 78, 78);
+}
+.adminApp .container .content .regDrone .formWrapper {
+  margin-top: 30px;
+  width: 80%;
+}
+.adminApp .container .content .regDrone .formWrapper input, .adminApp .container .content .regDrone .formWrapper textarea {
+  margin-bottom: 20px;
+}
+.adminApp .container .content .regDrone .formWrapper .btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.adminApp .container .content .sendMailContainer {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  color: rgb(78, 78, 78);
+}
+.adminApp .container .content .sendMailContainer .mail {
+  width: 80%;
+}
+.adminApp .container .content .sendMailContainer .mail label {
+  font-weight: 600;
+}
+.adminApp .container .content .sendMailContainer .mail input {
+  margin-bottom: 20px;
+}
+.adminApp .container .content .sendMailContainer .mail textarea {
+  height: 120px;
+  margin-bottom: 20px;
+}
+
 body {
   max-width: 1700px;
   margin: 0px auto;
@@ -50,7 +430,7 @@ nav .nav-control .btn {
 nav .nav-control .btn button {
   border-radius: 50px;
   height: 45px;
-  background-color: rgb(52, 223, 117) !important;
+  background-color: #03C9D7 !important;
 }
 
 .menu {
@@ -62,7 +442,7 @@ nav .nav-control .btn button {
   z-index: 22;
   background-color: black;
   transition: 0.2s;
-  background-color: rgb(52, 223, 117) !important;
+  background-color: #03C9D7 !important;
   transform: translateX(100%);
 }
 .menu .burger {
@@ -127,7 +507,7 @@ nav .nav-control .btn button {
   padding: 20px;
   border-radius: 50px;
   margin-top: 20px;
-  background-color: rgb(52, 223, 117) !important;
+  background-color: #03C9D7 !important;
 }
 .hero .text p {
   color: gray;
@@ -195,7 +575,7 @@ nav .nav-control .btn button {
 }
 .service .service-container .content i {
   font-size: 40px;
-  color: rgb(52, 223, 117) !important;
+  color: #03C9D7 !important;
 }
 .service .service-container .content p {
   font-size: 18px;
@@ -232,7 +612,7 @@ nav .nav-control .btn button {
   padding: 20px;
   border-radius: 50px;
   margin-top: 20px;
-  background-color: rgb(52, 223, 117) !important;
+  background-color: #03C9D7 !important;
 }
 .Ads .text p {
   font-size: 25px;
@@ -268,7 +648,7 @@ nav .nav-control .btn button {
   padding: 20px;
   border-radius: 50px;
   margin-top: 20px;
-  color: rgb(52, 223, 117) !important;
+  color: #03C9D7 !important;
 }
 .Ads2 p {
   font-size: 25px;
@@ -300,7 +680,7 @@ footer .footer-top button {
   font-size: 18px;
   padding: 20px;
   border-radius: 50px;
-  background-color: rgb(52, 223, 117) !important;
+  background-color: #03C9D7 !important;
 }
 footer .footer-content {
   display: flex;

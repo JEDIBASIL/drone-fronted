@@ -1,3 +1,4 @@
+@import 'admin';
 body{
     max-width: 1700px;
     margin: 0px auto;
@@ -50,7 +51,7 @@ body{
                 button{
                     border-radius: 50px;
                     height: 45px;
-                    background-color: rgb(52, 223, 117) !important;
+                    background-color: #03C9D7 !important;
                 }
             }
           
@@ -65,7 +66,7 @@ body{
         z-index: 22;
         background-color:black;
         transition: 0.2s;
-       background-color: rgb(52, 223, 117) !important;
+       background-color: #03C9D7 !important;
         transform: translateX(100%);
         .burger{
             display: flex;
@@ -126,7 +127,7 @@ body{
                 padding: 20px;
                 border-radius: 50px;
                 margin-top: 20px;
-                background-color: rgb(52, 223, 117) !important;
+                background-color: #03C9D7 !important;
             }
             p{
                 color: gray;
@@ -202,7 +203,7 @@ body{
                 text-align: center;
                 i{
                     font-size: 40px;
-                    color: rgb(52, 223, 117) !important;
+                    color: #03C9D7 !important;
                 }
                 p{
                     font-size: 18px;
@@ -246,7 +247,7 @@ body{
                 padding: 20px;
                 border-radius: 50px;
                 margin-top: 20px;
-                background-color: rgb(52, 223, 117) !important;
+                background-color: #03C9D7 !important;
             }
             p{
                 font-size: 25px;
@@ -285,7 +286,7 @@ body{
             padding: 20px;
             border-radius: 50px;
             margin-top: 20px;
-            color: rgb(52, 223, 117) !important;
+            color: #03C9D7 !important;
         }
         p{
             font-size: 25px;
@@ -316,7 +317,7 @@ body{
                 font-size: 18px;
                 padding: 20px;
                 border-radius: 50px;
-                background-color: rgb(52, 223, 117) !important;
+                background-color: #03C9D7 !important;
             }
 
             display: flex;

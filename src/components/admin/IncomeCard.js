@@ -56,10 +56,10 @@ const IncomeCard = () => {
                         <VictoryBar 
                         width={600}
                           barWidth={25}
-                        cornerRadius={13}
+                        cornerRadius={3}
                             data={chartData}
                             style={{
-                                data: { fill: "#9775fa" },
+                                data: { fill: "#03C9D7" },
                                 
                             }}
                             // data accessor for x values
