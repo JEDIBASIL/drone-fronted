@@ -1,0 +1,403 @@
+.adminApp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    background-color: whitesmoke;
+
+    .information{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        h2{
+            color: rgb(78, 78, 78);
+          }
+          img{
+            width: 400px;
+          }
+          p{
+            font-size: 18px;
+            color: slategrey;
+          }
+      }
+
+
+
+    .sidebar {
+        min-width: 280px;
+        max-width: 280px;
+        border-right: 1px solid rgb(228, 228, 228);
+        background-color: white;
+        height: 100vh;
+        padding-top: 20px;
+        overflow: auto;
+        position: sticky;
+        top: 0;
+        transition: 0.2s;
+        .sidebar-menu {
+            padding: 0px 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 10px;
+            .sidebar-a {
+                /* width: 100%; */
+                display: flex;
+                align-items: center;
+                padding: 16px 8px;
+                justify-content: flex-start;
+                padding-left: 15px;
+                gap: 15px;
+                text-decoration: none;
+                font-weight: 500;
+                color: black;
+                border-radius: 5px;
+                &:hover {
+                    background-color: #f8f9fa;
+                }
+                &.active {
+                    background-color: rgb(242, 246, 248) !important;
+                }
+            }
+
+            .sidebar-item {
+                border-color: transparent !important;
+                .item-wrapper {
+                    display: flex;
+                    padding: 10px 0;
+                    border-radius: 5px;
+                    a {
+                        padding-left: 15px;
+                    }
+                    &:hover {
+                        background-color: #f8f9fa;
+                    }
+                }
+                span {
+                    display: flex;
+                    gap: 15px;
+                }
+                h3 {
+                    border-radius: 5px;
+                    button {
+                        &:hover {
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            .item-wrapper {
+                a {
+                    display: flex !important;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    gap: 15px;
+                    color: rgb(78, 78, 78);
+                    font-size: 16px;
+                }
+            }
+        }
+        &.minimizeBar {
+            position: fixed;
+            min-width: 380px;
+            max-width: 380px;
+            height: calc(100vh - 40px);
+            top: 20px;
+            left: 20px;
+            border: 1px solid gainsboro;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.144);
+            z-index: 20;
+            transition: 0.2s;
+            /* transform: translateX(-110%); */
+        }
+    }
+
+    .container {
+        width: 100%;
+        background-color: whitesmoke;
+        min-height: 100vh;
+        transition: 0.3s;
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+            padding: 0px 20px;
+            h1 {
+                color: rgb(92, 92, 92);
+            }
+            .search-bar {
+                width: 300px;
+            }
+            .admin-details {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-size: 18px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                i {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gainsboro;
+                    svg {
+                        width: 22px;
+                        transition: 0.2s;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding: 30px;
+            .dashboard-container {
+                width: 100%;
+                .IncomeCard {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    gap: 30px;
+                    .MonthCalander {
+                        background-color: white;
+                        width: max-content;
+                        padding: 20px;
+                        border-radius: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        place-items: center;
+                        background-color: #03c9d7;
+                        h1 {
+                            margin-bottom: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 150px;
+                            width: 100%;
+                            background-color: #ffffff77;
+                            border-radius: 10px;
+                            color: whitesmoke;
+                        }
+                        button {
+                            font-weight: 600;
+                            color: white !important;
+                            &:hover {
+                                color: gray !important;
+                            }
+                        }
+                        svg {
+                            color: gainsboro !important;
+                            font-size: 40px;
+                        }
+                        div {
+                            font-weight: 600;
+                            color: gainsboro !important;
+                        }
+                    }
+                    .IncomeGraphContainer {
+                        width: 100%;
+                        background-color: white;
+                        padding: 30px;
+                        border-radius: 20px;
+                        .IncomeCardContainer {
+                            width: 100%;
+                            height: max-content;
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            .card {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                border-bottom: 1px solid gainsboro;
+                                padding-bottom: 20px;
+                                h1 {
+                                    color: rgb(95, 95, 95);
+                                }
+                                span {
+                                    font-size: 18px;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                        .incomeChart {
+                            height: 350px;
+                            width: 100%;
+                            background-color: whitesmoke;
+                            border-radius: 20px;
+                            margin-top: 20px;
+                            padding: 25px;
+                            overflow: hidden;
+                            svg {
+                                width: 100% !important;
+                                transform: scale(1.4) translateY(-10px);
+                                g {
+                                    text {
+                                        tspan {
+                                            font-size: 10px !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .Overview {
+                    background-color: #ffffff;
+                    border-radius: 30px;
+                    padding: 20px;
+                    .overview-date {
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-end;
+                        align-items: center;
+                    }
+                    .OverviewCard {
+                        display: grid;
+                        width: 100%;
+                        grid-template-columns: repeat(3, 1fr);
+                        .card {
+                            height: max-content;
+                            background-color: white;
+                            display: flex;
+                            flex-direction: column-reverse;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            padding: 20px 0px;
+                            &:nth-child(2),
+                            &:nth-child(5) {
+                                border-left: 2px solid gainsboro;
+                                border-right: 2px solid gainsboro;
+                                border-radius: 0;
+                            }
+                            &:nth-child(1),
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                border-bottom: 1px solid gainsboro;
+                            }
+
+                            h1 {
+                                font-size: 40px;
+                                color: slategray;
+                            }
+
+                            .top {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                font-size: 16px;
+                                color: slategray;
+                                svg{
+                                    width: 30px;
+                                    height: 30px;
+                                    display: none;
+                                  
+                                  }
+                            }
+                        }
+                    }
+                  
+                }
+
+                .recent-user{
+                    margin-top: 30px;
+                    background-color: white;
+                    border-radius: 20px;
+                    padding: 30px;
+                    h2{
+                        margin-bottom: 20px;
+                        color: rgb(78, 78, 78);
+                      }
+                      table {
+                      button{
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                          }
+                      
+                      }
+                    }
+                  }
+            }
+
+            .table-container{
+                background-color: white;
+                padding: 30px;
+                border-radius: 20px;
+                table {
+                  
+                    button{
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                  }
+                }
+                &.drone{
+                    table{
+                        display: none;
+                    }
+                }
+              }
+              .regDrone{
+                background-color: white;
+                padding: 30px;
+                border-radius: 20px;
+                color: rgb(78, 78, 78);
+                .formWrapper{
+                    margin-top: 30px;
+                    width: 80%;
+                     input, textarea {margin-bottom: 20px;}
+                     .btn-container{
+                        display: flex;
+                        justify-content: flex-end;
+                      }
+                  }
+              }
+              .sendMailContainer{
+                background-color: white;
+                padding: 30px;
+                border-radius: 20px;
+                color: rgb(78, 78, 78);
+                .mail{
+                    width: 80%;
+                    label{
+                        font-weight: 600;
+                      }
+                      input{
+                        margin-bottom: 20px;
+                      }
+                     textarea{
+                        height: 120px;
+                        margin-bottom: 20px;
+                      }
+                  }
+              }
+        }
+    }
+}
